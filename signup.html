@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <!-- Include your CSS stylesheet here -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="signup-container">
+        <h1>Sign Up</h1>
+        <form action="/register" method="POST" id="signup-form">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+
+    <!-- Add JavaScript for redirection -->
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function (event) {
+            // Prevent the form from submitting normally
+            event.preventDefault();
+            
+            // Redirect to the home page after signup is completed
+            window.location.href = 'base.html'; // Replace 'home.html' with your home page URL
+        });
+    </script>
+</body>
+</html>
+
